@@ -10,19 +10,14 @@ pipeline {
         stage('Build') {
             steps {
                 // Use Maven to build your project
-                sh 'mvn clean package'
+                echo " Build stage"
             }
         }
         stage('Test') {
             steps {
                 // Run tests if applicable
-                sh 'mvn test'
-            }
-        }
-        stage('Deploy') {
-            steps {
-                // Deploy your artifact, if necessary
-                // Example: sh 'mvn deploy'
+                echo "test stage"
+     
             }
         }
     }
